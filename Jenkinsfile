@@ -15,13 +15,13 @@ pipeline{
 	     
 	stage('build') {
 
-	sh mvn clean package
+	   sh "mvn clean package"
 
 	}
 	     
        stage('docker image') {
 
-       sh docker build -t bpavani19992/java-web-app:latest .
+       sh "docker build -t bpavani19992/java-web-app:latest ."
                              }
        }
 
