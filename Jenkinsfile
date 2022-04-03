@@ -31,6 +31,7 @@ pipeline{
 		     steps{
 			     sh " docker login -u bpavani -p Thaswika17@ "
 		     }
+	     }
 		     stage(' docker push'){
 			     steps{
 				     sh " docker push bpavani/java-web-app:latest "
