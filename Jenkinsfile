@@ -8,20 +8,21 @@ pipeline{
 	
      stages{
         
-        stage('git clone') {
+        stage('git clone'){
 
               git credentialsId: 'GIT-HUB-CREDENTIALS', url: 'https://github.com/bpavani1992/java-k8s-deploy.git'
 	       }
 	     
-	stage('build') {
+	stage('build'){
 
-	   sh "mvn clean package"
+	   sh " mvn clean package "
 
 	}
 	     
-       stage('docker image') {
+       stage('docker image'){
 
-       sh "docker build -t bpavani19992/java-web-app:latest ."
+       sh " docker build -t bpavani19992/java-web-app:latest . "
                              }
        }
+}
 
